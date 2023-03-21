@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Input",
+  "type": "object",
+  "properties": {
+    "hand": {
+      "$ref": "#/$defs/tiles"
+    },
+    "dora": {
+      "$ref": "#/$defs/tiles"
+    },
+    "jikaze": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "bakaze": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "extra": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "mode": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 7
+    },
+    "calcScore": {
+      "type": "boolean"
+    },
+    "useRed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "hand",
+    "dora",
+    "jikaze",
+    "bakaze",
+    "mode",
+    "extra",
+    "calcScore",
+    "useRed"
+  ],
+
+  "$defs": {
+    "tiles": {
+      "type": "string",
+      "pattern": "^(\\d+[mps]|[1-7]+z)*$",
+      "maxLength": 31
+    }
+  }
+}

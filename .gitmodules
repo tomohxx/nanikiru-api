@@ -1,0 +1,3 @@
+[submodule "app/src/necessary-and-unnecessary-tiles"]
+	path = app/src/necessary-and-unnecessary-tiles
+	url = https://github.com/tomohxx/necessary-and-unnecessary-tiles.git

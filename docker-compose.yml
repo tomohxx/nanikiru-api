@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  app:
+    build:
+      context: ./app
+  web:
+    build:
+      context: ./web
+    ports:
+      - 18000:80
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
